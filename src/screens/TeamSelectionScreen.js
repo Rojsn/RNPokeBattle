@@ -69,5 +69,13 @@ const styles = {
   messageText: {
     fontSize: 13,
     color: "#676767"
+  },
+  componentDidMount() {
+    this.pusher = new Pusher("YOUR PUSHER APP KEY", {
+      authEndpoint: "YOUR_NGROK_URL/pusher/auth",
+      cluster: "YOUR PUSHER APP CLUSTER",
+      encrypted: true
+    });
   }
 };
+
